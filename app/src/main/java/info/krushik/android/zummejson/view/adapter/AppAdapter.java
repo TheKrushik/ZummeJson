@@ -27,7 +27,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.AppViewHolder> {
     public AppViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.rate, parent, false);
+                .inflate(R.layout.cardview_layout_app, parent, false);
         return new AppViewHolder(itemView);
     }
 

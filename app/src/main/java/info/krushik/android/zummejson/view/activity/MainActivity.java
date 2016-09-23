@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rates_list);
+        setContentView(R.layout.activity_main);
         context = this;
         initFields();
         if (savedInstanceState != null && !savedInstanceState.isEmpty()) {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void getPrices(final View view) {
+    public void getPrice(final View view) {
 
         progressBar.setVisibility(ProgressBar.VISIBLE);
         recyclerView.setVisibility(ProgressBar.GONE);
@@ -96,11 +96,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initFields() {
-        progressBar = (ProgressBar) findViewById(R.id.loadProgressBar);
-        recyclerView = (RecyclerView) findViewById(R.id.rates_list_recycler_view);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         destination = (TextView) findViewById(R.id.destination);
         isMobile = (TextView) findViewById(R.id.isMobile);
-        btnGetPrice = (Button) findViewById(R.id.buttonGetPrices);
+        btnGetPrice = (Button) findViewById(R.id.btnGetPrice);
     }
 }
 

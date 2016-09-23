@@ -1,55 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".del.activity.MainActivity">
+    tools:context=".view.activity.MainActivity">
 
     <Button
-        android:text="@string/get_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="getPrice"
-        android:id="@+id/btnGetPrice" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/cardList"
+        android:id="@+id/btnGetPrice"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/isMobile" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="getPrice"
+        android:text="@string/get_price" />
+
 
     <TextView
-        android:text="destination"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/destination"
-        android:layout_below="@+id/btnGetPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp" />
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:gravity="center" />
 
     <TextView
-        android:text="isMobile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/isMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/destination"
-        android:layout_alignLeft="@+id/destination"
-        android:layout_alignStart="@+id/destination" />
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnGetPrice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/isMobile"
+        android:scrollbars="vertical" />
+
+
 
     <ProgressBar
+        android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:visibility="gone"
-        android:id="@+id/progressBar" />
+        android:visibility="gone" />
+
 </RelativeLayout>
